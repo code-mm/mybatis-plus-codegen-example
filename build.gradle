@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.my'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    runtimeOnly 'mysql:mysql-connector-java:8.0.33'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.3.1'
+    implementation 'com.baomidou:mybatis-plus-generator:3.5.3.1'
+    implementation 'org.freemarker:freemarker:2.3.31'
+    implementation 'org.apache.velocity:velocity-engine-core:2.3'
+}
+
+test {
+    useJUnitPlatform()
+}
